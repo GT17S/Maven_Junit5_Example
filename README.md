@@ -12,7 +12,8 @@ Il pourra être nécessaire de [configurer](http://maven.apache.org/guides/mini/
 1. Copier les fichiers `Compte.java` et `CompteTest.java` du TD précédent à la place des sources actuelles ;
 1. Créez un nouveau projet Maven avec le plugin `archetype` en sélectionnant l’archétype `maven-archetype-quickstart` (groupe `fr.uvsq.tod`, artéfact `compte`, package `fr.uvsq.tod.compte`) ;
     1. dans quel répertoire le projet Maven a-t'il été créé ?
-        > RÉPONDRE ICI
+        > le repertoire de projet Maven est: compte
+        
     1. dans quels répertoires se trouvent les sources et les sources des test ?
         > RÉPONDRE ICI
     1. dans quel fichier se trouve la description du projet ?
