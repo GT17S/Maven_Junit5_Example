@@ -16,7 +16,7 @@ Il pourra être nécessaire de [configurer](http://maven.apache.org/guides/mini/
 
     1. dans quels répertoires se trouvent les sources et les sources des test ?
         > pour les sources main :	src/main/java/fr/uvsq/tod/compte
-          pour les sources tests:	src/test/java/fr/uvsq/tod/compte
+        > pour les sources tests:	src/test/java/fr/uvsq/tod/compte
 
     1. dans quel fichier se trouve la description du projet ?
         > la description de projet se trouve dans le fichier: pom.xml
