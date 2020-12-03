@@ -13,14 +13,23 @@ Il pourra être nécessaire de [configurer](http://maven.apache.org/guides/mini/
 1. Créez un nouveau projet Maven avec le plugin `archetype` en sélectionnant l’archétype `maven-archetype-quickstart` (groupe `fr.uvsq.tod`, artéfact `compte`, package `fr.uvsq.tod.compte`) ;
     1. dans quel répertoire le projet Maven a-t'il été créé ?
         > le repertoire de projet Maven est: compte
-        
+
     1. dans quels répertoires se trouvent les sources et les sources des test ?
-        > RÉPONDRE ICI
+        > pour les sources main :	src/main/java/fr/uvsq/tod/compte
+          pour les sources tests:	src/test/java/fr/uvsq/tod/compte
+
     1. dans quel fichier se trouve la description du projet ?
-        > RÉPONDRE ICI
+        > la description de projet se trouve dans le fichier: pom.xml
+
     1. exécuter Maven dans le répertoire créé
         ```bash
-        # RÉPONDRE ICI
+        //avant de modifier le projet maven de depart
+        mvn package
+        java -cp target/compte-1.0-SNAPSHOT.jar fr.uvsq.tod.App 
+
+        //apres modification de projet maven
+        mvn package
+        java -cp target/compte-1.0-SNAPSHOT.jar fr.uvsq.tod.compte
         ```
 1. Corriger la structure pour Maven
     1. déplacer le fichier de description Maven à la racine du projet Java
