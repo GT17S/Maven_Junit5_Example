@@ -1,5 +1,8 @@
 package fr.uvsq.tod.compte;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import fr.uvsq.tod.exceptions.DecouvertException;
 import fr.uvsq.tod.exceptions.NegatifBalanceException;
 
@@ -10,6 +13,8 @@ import fr.uvsq.tod.exceptions.NegatifBalanceException;
  * @version 2020
  */
 public class Compte {
+private static final Logger logger = LogManager.getLogger(Compte.class);
+
 
   private int balance;
 
@@ -55,13 +60,21 @@ public class Compte {
 
     public static void main(String[] args)
     {
-        Compte compteKARIM,compteABDENOUR;
+logger.info("Hello, World compte karim et abdenour!");
+Compte compteKARIM, compteABDENOUR;
 
-        compteKARIM= new Compte(5000);
-        compteABDENOUR= new Compte(6000);
+compteKARIM = new Compte(5000);
+compteABDENOUR = new Compte(6000);
 
-        compteKARIM.virement(compteABDENOUR,5600);
-        System.out.println("ABdenour balance is"+compteABDENOUR.getBalance());
+compteKARIM.virement(compteABDENOUR, 5000);
+System.out.println("ABdenour balance is" + compteABDENOUR.getBalance());
+
+if (logger.isDebugEnabled())
+{
+  logger.debug("Logging in user's balance is: " + compteABDENOUR.getBalance() + " euros");
+}
+logger.info("thank you dear user for using our machines");
+
 
 
     
