@@ -7,6 +7,6 @@ import static org.junit.Assert.assertEquals;
 public class RomanNumeralsConverterTest {
   @Test
   public void shouldConvertTheDigitI() {
-    assertEquals(1, RomanNumeralsConverter.convert("I"));
+    assertEquals(1, RomanNumeralsConverter.toDecimal("I"));
   }
 }
