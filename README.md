@@ -54,10 +54,10 @@ Il pourra être nécessaire de [configurer](http://maven.apache.org/guides/mini/
     1. générer une archive du projet contenant ses dépendances (*uber-jar*) en utilisant le plugin [assembly](http://maven.apache.org/plugins/maven-assembly-plugin/) (ou le plugin [shade](https://maven.apache.org/plugins/maven-shade-plugin/))
 1. Intégrer [Maven wrapper](https://github.com/takari/maven-wrapper) au projet
     1. quelle est l'utilité de ce plugin ?
-        > RÉPONDRE ICI
+        > Le Maven Wrapper est un moyen simple de s'assurer qu'un utilisateur de votre build Maven dispose de tout le nécessaire pour exécuter le build Maven.
     1. quelle commande doit-on utiliser dorénavant pour générer un `jar` du projet ?
         ```bash
-        # RÉPONDRE ICI
+        .mvn/wrapper/maven-wrapper.jar
         ```
 
 ## Découverte de JUnit 5 (distanciel)
