@@ -14,8 +14,9 @@
 
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-     <checkstyle.plugin.version>3.0.0</checkstyle.plugin.version>
+    <checkstyle.plugin.version>3.0.0</checkstyle.plugin.version>
     <javadoc.plugin.version>3.2.0</javadoc.plugin.version>
+    <junit.version>4.13</junit.version>
   </properties>
 
   <dependencies>
@@ -49,7 +50,43 @@
         <version>2.13.0</version>
       </dependency>
 
+
+<dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.vintage</groupId>
+      <artifactId>junit-vintage-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
+
+
+
+  <dependencyManagement>
+    <dependencies>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>5.7.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <build>
     <pluginManagement>
