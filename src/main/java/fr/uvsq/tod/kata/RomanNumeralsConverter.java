@@ -15,6 +15,15 @@ public class RomanNumeralsConverter {
   public static int toDecimal(String aRomanNumer)
   {
     if(aRomanNumer == "I") return 1;
-    else return 0;
+    if(aRomanNumer == "V") return 5;
+    if(aRomanNumer == "X") return 10;
+    if(aRomanNumer == "L") return 50;
+    if(aRomanNumer == "C") return 100;
+    if(aRomanNumer == "D") return 500;
+    if(aRomanNumer == "M") return 1000;
+
+    if (aRomanNumer == null) throw new IllegalArgumentException("aRomanNumer cannot be a null value");
+    if (aRomanNumer == "") throw new IllegalArgumentException("aRomanNumer cannot be blank");
+    else throw new IllegalArgumentException("can't handle an ordered string");
   }
 }
