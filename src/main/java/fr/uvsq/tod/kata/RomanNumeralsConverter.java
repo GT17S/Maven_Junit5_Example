@@ -1,5 +1,8 @@
 package fr.uvsq.tod.kata;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * La classe <code>RomanNumeralsConverter</code> regroupe des fonctions pour la manipulation de nombres en numération romaine.
  *
@@ -12,32 +15,21 @@ public class RomanNumeralsConverter {
    * @param aRomanNumer la chaîne de caractères contenant le nombre en chiffres romains
    * @return la valeur décimal de ce nombre
    */
-  public static int toDecimal(String aRomanNumer)
-  {
+  public static int toDecimal(String aRomanNumer) {
 
-      if (aRomanNumer == null) throw new IllegalArgumentException("aRomanNumer cannot be a null value");
+      Map<String, Integer> RomanMap = new HashMap<>();
+      RomanMap.put("I", 1);
+      RomanMap.put("V", 5);
+      RomanMap.put("X", 10);
+      RomanMap.put("L", 50);
+      RomanMap.put("C", 100);
+      RomanMap.put("D", 500);
+      RomanMap.put("M", 1000);
 
-      switch (aRomanNumer) {
-          case "I":  return 1;
-
-          case "V":  return 5;
-
-          case "X":  return 10;
-
-          case "L":  return 50;
-
-          case "C":  return 100;
-
-          case "D":  return 500;
-
-          case "M":  return 1000;
-
-          case "":  throw new IllegalArgumentException("aRomanNumer cannot be blank");
-
-
-          default: throw new IllegalArgumentException("Can't handle an unordered string");
-
-      }
+      if (RomanMap.containsKey(aRomanNumer)) return RomanMap.get(aRomanNumer);
+      else if(aRomanNumer == "") throw new IllegalArgumentException("aRomanNumer cannot be blank");
+      else if(aRomanNumer == null) throw new IllegalArgumentException("aRomanNumer cannot be a null value");
+      else throw new IllegalArgumentException("Can't handle an unordered string");
 
   }
 }
