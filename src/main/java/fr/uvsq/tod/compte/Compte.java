@@ -60,20 +60,24 @@ private static final Logger logger = LogManager.getLogger(Compte.class);
 
     public static void main(String[] args)
     {
-logger.info("Hello, World compte karim et abdenour!");
-Compte compteKARIM, compteABDENOUR;
 
-compteKARIM = new Compte(5000);
-compteABDENOUR = new Compte(6000);
+    logger.info("Hello, cher utilisateur!");
+    //deux comptes A comme adam et K comme kasparov
+    Compte compteK, compteA;
 
-compteKARIM.virement(compteABDENOUR, 5000);
-System.out.println("ABdenour balance is" + compteABDENOUR.getBalance());
+    compteK = new Compte(5000);
+    compteA = new Compte(6000);
 
-if (logger.isDebugEnabled())
-{
-  logger.debug("Logging in user's balance is: " + compteABDENOUR.getBalance() + " euros");
-}
-logger.info("thank you dear user for using our machines");
+    //Kasparov fait virement a Adam
+    compteK.virement(compteA, 5000);
+    logger.info("logging user Kasparov sends "+5000 + " euros");
+
+    if (logger.isDebugEnabled())
+    {
+      //adam reçoit le montant de l'argent versé
+      logger.debug("Logging in recever Adam's balance is: " + compteA.getBalance() + " euros");
+    }
+      logger.info("Thank you dear user for using our machines");
 
 
 
