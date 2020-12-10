@@ -17,6 +17,14 @@ public class RomanNumeralsConverterTest {
         assertEquals(intValue, RomanNumeralsConverter.toDecimal(RomanNumber));
     }
 
+    @Test
+    void testIllegalArgumentExceptionOfNullValuePuttenIN() {
+
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            RomanNumeralsConverter.toDecimal(null);
+        });
+    }
+
     @ParameterizedTest
     @ValueSource(strings = { "","this is london" })
     void testEmptyValueOrAnOrderedValuePuttenIN(String Value) {
