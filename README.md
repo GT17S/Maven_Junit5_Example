@@ -15,9 +15,12 @@ Il pourra être nécessaire de [configurer](http://maven.apache.org/guides/mini/
         > le repertoire de projet Maven est: compte
 
     1. dans quels répertoires se trouvent les sources et les sources des test ?
-        > pour les sources main :	src/main/java/fr/uvsq/tod/compte
-        > pour les sources tests:	src/test/java/fr/uvsq/tod/compte
-
+        ```bash
+        
+        pour les sources main :	src/main/java/fr/uvsq/tod/compte
+        pour les sources tests:	src/test/java/fr/uvsq/tod/compte
+        ```
+        
     1. dans quel fichier se trouve la description du projet ?
         > la description de projet se trouve dans le fichier: pom.xml
 
@@ -25,11 +28,11 @@ Il pourra être nécessaire de [configurer](http://maven.apache.org/guides/mini/
         ```bash
         //avant de modifier le projet maven de depart
         mvn package
-        java -cp target/compte-1.0-SNAPSHOT.jar fr.uvsq.tod.App 
+        java -cp target/compte-1.0-SNAPSHOT.jar fr.uvsq.tod.compte.App 
 
         //apres modification de projet maven
         mvn package
-        java -cp target/compte-1.0-SNAPSHOT.jar fr.uvsq.tod.compte
+        java -cp target/compte-1.0-SNAPSHOT.jar fr.uvsq.tod.compte.Compte
         ```
 1. Corriger la structure pour Maven
     1. déplacer le fichier de description Maven à la racine du projet Java

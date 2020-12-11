@@ -9,9 +9,10 @@ import fr.uvsq.tod.exceptions.NegatifBalanceException;
 /**
  * La classe <code>Compte</code> représente un compte bancaire.
  *
- * @author hal & uvsq21087955
+ * @author hal & uvsq21087955 & gt17S
  * @version 2020
  */
+
 public class Compte {
 private static final Logger logger = LogManager.getLogger(Compte.class);
 
